@@ -1,0 +1,8 @@
+{
+  "name": "learning-esl-vocabulary",
+  "description": "Helps ESL learners improve English vocabulary with explanations, examples, and audio review",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/learning-esl-vocabulary"
+  ]
+}
