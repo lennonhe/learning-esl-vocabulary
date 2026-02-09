@@ -19,7 +19,7 @@ from datetime import datetime
 try:
     import pdfplumber
 except ImportError:
-    print("Error: pdfplumber is required. Install with: pip install pdfplumber")
+    print("Error: pdfplumber is required. Install with: pip install pdfplumber", file=sys.stderr)
     sys.exit(1)
 
 
@@ -209,7 +209,7 @@ if __name__ == '__main__':
     sys.stderr.reconfigure(encoding='utf-8')
 
     if len(sys.argv) != 2:
-        print("Usage: python extract_bbdc_words.py <pdf_path_or_url>")
+        print("Usage: python extract_bbdc_words.py <pdf_path_or_url>", file=sys.stderr)
         sys.exit(1)
 
     input_path = sys.argv[1]
@@ -226,7 +226,7 @@ if __name__ == '__main__':
             local_path, original_filename = download_pdf(input_path, download_dir)
             print(f"Downloaded to: {local_path}")
         except Exception as e:
-            print(f"Error downloading PDF: {e}")
+            print(f"Error downloading PDF: {e}", file=sys.stderr)
             sys.exit(1)
 
     # Extract words from the PDF

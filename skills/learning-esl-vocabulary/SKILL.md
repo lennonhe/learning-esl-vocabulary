@@ -1,6 +1,6 @@
 ---
 name: learning-esl-vocabulary
-description: ESL vocabulary learning assistant. Triggers: "learn 'word'" for vocabulary explanations, "review [YYYY-MM-DD]" for daily review with audio (optional date), "explain 'word' in \"sentence\"" for contextual meanings, "import-review 'file.pdf'" or "import-review 'https://...'" for PDF vocabulary import.
+description: ESL vocabulary tutor with four modes - learn words with examples (learn 'word'), review with audio stories (review [date]), explain words in context (explain 'word' in "sentence"), and import from PDFs (import-review 'path').
 argument-hint: "'word'" or "'word' in \"sentence\"" or "'path/to/file.pdf'" or "'https://...'" or "YYYY-MM-DD"
 allowed-tools: [Read, Write, Glob, Bash]
 context: fork
@@ -35,6 +35,12 @@ If neither installed, reviews generate without audio.
 
 ### Optional: PDF Import
 - **pdfplumber**: `pip install pdfplumber`
+
+### Configuration
+- **references/config.json**: TTS voice and speed settings for audio generation
+  - Configure OpenAI TTS model, voice (default: alloy), and speaking instructions
+  - Modify `slow_instructions` and `normal_instructions` to adjust speech style
+  - See [audio-generation-guide.md](references/audio-generation-guide.md) for details
 
 ## Core Workflows
 
@@ -99,13 +105,7 @@ If neither installed, reviews generate without audio.
 
 **Reference files**: [import-review-template.md](references/import-review-template.md), [story-generation-guide.md](references/story-generation-guide.md)
 
-1. **Check dependency**:
-   ```bash
-   # Unix/macOS/PowerShell:
-   python -c "import pdfplumber" 2>/dev/null || echo "pdfplumber not installed"
-   # Windows CMD:
-   python -c "import pdfplumber" 2>nul || echo pdfplumber not installed
-   ```
+1. **Check dependency**: The script will auto-detect if pdfplumber is installed and provide installation instructions if missing
 2. **Extract words**: Run `python scripts/extract-bbdc-words.py "path_or_url"` to extract vocabulary
    - The script automatically detects URLs (http:// or https://)
    - URLs are downloaded to `bbdc-review/downloads/YYYY-MM-DD/`
