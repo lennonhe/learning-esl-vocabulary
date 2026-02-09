@@ -111,7 +111,7 @@ OpenAI TTS provides high-quality, natural-sounding voices with support for long 
 
 3. **Create or edit the config file:**
 
-   Create `~/.claude/plugins/learning-esl-vocabulary/skills/learning-esl-vocabulary/config.json`:
+   Create `config.json` in the skill directory (alongside SKILL.md):
    ```json
    {
      "tts": {

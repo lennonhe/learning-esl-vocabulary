@@ -44,14 +44,14 @@ When you run `review`, the skill generates:
 
 **OpenAI TTS command**:
 ```bash
-python .claude/skills/learning-esl-vocabulary/scripts/openai-tts.py "TEXT" "{target-date}/daily-review-slow.mp3" slow
-python .claude/skills/learning-esl-vocabulary/scripts/openai-tts.py "TEXT" "{target-date}/daily-review-normal.mp3" normal
+python scripts/openai-tts.py "TEXT" "{target-date}/daily-review-slow.mp3" slow
+python scripts/openai-tts.py "TEXT" "{target-date}/daily-review-normal.mp3" normal
 ```
 
 **edge-tts command**:
 ```bash
-python .claude/skills/learning-esl-vocabulary/scripts/edge-tts-wrapper.py "TEXT" "{target-date}/daily-review-slow.mp3" slow
-python .claude/skills/learning-esl-vocabulary/scripts/edge-tts-wrapper.py "TEXT" "{target-date}/daily-review-normal.mp3" normal
+python scripts/edge-tts-wrapper.py "TEXT" "{target-date}/daily-review-slow.mp3" slow
+python scripts/edge-tts-wrapper.py "TEXT" "{target-date}/daily-review-normal.mp3" normal
 ```
 
 ### For PDF Imports
@@ -68,14 +68,14 @@ When you run `import-review`, the skill generates:
 
 **OpenAI TTS command**:
 ```bash
-python .claude/skills/learning-esl-vocabulary/scripts/openai-tts.py --file "bbdc-review/{date}/{pdf-basename}-audio-text.txt" "bbdc-review/{date}/{pdf-basename}-review-slow.mp3" slow
-python .claude/skills/learning-esl-vocabulary/scripts/openai-tts.py --file "bbdc-review/{date}/{pdf-basename}-audio-text.txt" "bbdc-review/{date}/{pdf-basename}-review-normal.mp3" normal
+python scripts/openai-tts.py --file "bbdc-review/{date}/{pdf-basename}-audio-text.txt" "bbdc-review/{date}/{pdf-basename}-review-slow.mp3" slow
+python scripts/openai-tts.py --file "bbdc-review/{date}/{pdf-basename}-audio-text.txt" "bbdc-review/{date}/{pdf-basename}-review-normal.mp3" normal
 ```
 
 **edge-tts command**:
 ```bash
-python .claude/skills/learning-esl-vocabulary/scripts/edge-tts-wrapper.py --file "bbdc-review/{date}/{pdf-basename}-audio-text.txt" "bbdc-review/{date}/{pdf-basename}-review-slow.mp3" slow
-python .claude/skills/learning-esl-vocabulary/scripts/edge-tts-wrapper.py --file "bbdc-review/{date}/{pdf-basename}-audio-text.txt" "bbdc-review/{date}/{pdf-basename}-review-normal.mp3" normal
+python scripts/edge-tts-wrapper.py --file "bbdc-review/{date}/{pdf-basename}-audio-text.txt" "bbdc-review/{date}/{pdf-basename}-review-slow.mp3" slow
+python scripts/edge-tts-wrapper.py --file "bbdc-review/{date}/{pdf-basename}-audio-text.txt" "bbdc-review/{date}/{pdf-basename}-review-normal.mp3" normal
 ```
 
 ## Troubleshooting
