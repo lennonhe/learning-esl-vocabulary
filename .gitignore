@@ -36,8 +36,6 @@ venv.bak/
 *~
 .DS_Store
 
-# Local config
-config.json
 
 # Test files
 test/

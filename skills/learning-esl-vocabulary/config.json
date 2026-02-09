@@ -1,0 +1,11 @@
+{
+  "tts": {
+    "provider": "openai",
+    "openai": {
+      "model": "gpt-4o-mini-tts",
+      "voice": "alloy",
+      "slow_instructions": "Speak clearly and naturally, at a slightly slower than normal pace, with warm tone, gentle pauses between sentences, and careful articulation. This audio is for English learners, so prioritize clarity and smooth flow without sounding robotic.",
+      "normal_instructions": "Speak naturally at a slightly faster than normal pace, with smooth linking, natural reductions, and conversational rhythm, while remaining clear and intelligible for advanced English learners."
+    }
+  }
+}
