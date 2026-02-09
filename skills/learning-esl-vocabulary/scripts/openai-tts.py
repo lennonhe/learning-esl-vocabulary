@@ -149,7 +149,7 @@ def main():
 
     # Find config.json relative to this script
     script_dir = Path(__file__).parent
-    config_path = script_dir.parent / "config.json"
+    config_path = script_dir.parent / "references" / "config.json"
 
     if not config_path.exists():
         print(f"Error: Config file not found at {config_path}", file=sys.stderr)

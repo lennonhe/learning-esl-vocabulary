@@ -106,7 +106,7 @@ If neither installed, reviews generate without audio.
    # Windows CMD:
    python -c "import pdfplumber" 2>nul || echo pdfplumber not installed
    ```
-2. **Extract words**: Run `python scripts/extract_bbdc_words.py "path_or_url"` to extract vocabulary
+2. **Extract words**: Run `python scripts/extract-bbdc-words.py "path_or_url"` to extract vocabulary
    - The script automatically detects URLs (http:// or https://)
    - URLs are downloaded to `bbdc-review/downloads/YYYY-MM-DD/`
    - Check script output for `[SOURCE_FILE]` and `[PDF_BASENAME]` when using URLs

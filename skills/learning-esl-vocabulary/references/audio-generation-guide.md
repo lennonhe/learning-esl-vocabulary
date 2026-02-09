@@ -103,13 +103,17 @@ This means neither OpenAI TTS nor edge-tts is configured. To fix:
 
 ## Configuration
 
-For OpenAI TTS, you can customize the voice and model by creating `config.json`:
+For OpenAI TTS, you can customize the voice and model in `references/config.json`:
 
 ```json
 {
-  "openai": {
-    "model": "tts-1-hd",
-    "voice": "alloy"
+  "tts": {
+    "openai": {
+      "model": "gpt-4o-mini-tts",
+      "voice": "alloy",
+      "slow_instructions": "Speak clearly and naturally, at a slightly slower than normal pace...",
+      "normal_instructions": "Speak naturally at a slightly faster than normal pace..."
+    }
   }
 }
 ```
