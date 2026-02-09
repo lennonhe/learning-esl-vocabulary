@@ -204,6 +204,10 @@ def extract_words(pdf_path):
 
 
 if __name__ == '__main__':
+    # Configure UTF-8 encoding for stdout/stderr to prevent UnicodeEncodeError on Windows
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
+
     if len(sys.argv) != 2:
         print("Usage: python extract_bbdc_words.py <pdf_path_or_url>")
         sys.exit(1)

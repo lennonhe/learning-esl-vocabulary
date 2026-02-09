@@ -35,6 +35,10 @@ async def generate_audio(text, output_file, rate):
 
 
 def main():
+    # Configure UTF-8 encoding for stdout/stderr to prevent UnicodeEncodeError on Windows
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
+
     if len(sys.argv) < 3:
         print("Usage: python edge-tts-wrapper.py <text> <output_file> [slow|normal]", file=sys.stderr)
         print("   or: python edge-tts-wrapper.py --file <input_file> <output_file> [slow|normal]", file=sys.stderr)

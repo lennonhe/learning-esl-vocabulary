@@ -115,6 +115,10 @@ def concatenate_audio_files(chunk_files, output_file):
 
 
 def main():
+    # Configure UTF-8 encoding for stdout/stderr to prevent UnicodeEncodeError on Windows
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
+
     if len(sys.argv) < 3:
         print("Usage: python openai-tts.py <text> <output_file> [slow|normal]", file=sys.stderr)
         print("   or: python openai-tts.py --file <input_file> <output_file> [slow|normal]", file=sys.stderr)
