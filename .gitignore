@@ -36,6 +36,12 @@ venv.bak/
 *~
 .DS_Store
 
+# Claude Code - ignore user-specific and local files
+.claude/projects/
+.claude/*.local.json
+.claude/*.local.md
+CLAUDE.local.md
+
 
 # Test files
 test/
