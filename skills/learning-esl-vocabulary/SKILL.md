@@ -1,7 +1,7 @@
 ---
 name: learning-esl-vocabulary
 version: 1.0.1
-description: ESL vocabulary tutor with four modes - learn words with examples (learn 'word'), review with audio stories (review [date]), explain words in context (explain 'word' in "sentence"), and import from PDFs (import-review 'path').
+description: Tutors ESL learners in English vocabulary for daily practice and PDF-based learning with four modes - learn words with examples (learn 'word'), review with audio stories (review [date]), explain words in context (explain 'word' in "sentence"), and import from PDFs (import-review 'path').
 argument-hint: "'word'" or "'word' in \"sentence\"" or "'path/to/file.pdf'" or "'https://...'" or "YYYY-MM-DD"
 allowed-tools: [Read, Write, Glob, Bash]
 context: fork

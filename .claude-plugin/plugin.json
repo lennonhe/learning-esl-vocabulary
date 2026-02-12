@@ -1,6 +1,6 @@
 {
   "name": "learning-esl-vocabulary",
-  "description": "Helps ESL learners improve English vocabulary with explanations, examples, and audio review",
+  "description": "Tutors ESL learners in English vocabulary for daily practice and PDF-based learning. Use 'learn word', 'review [date]', 'explain word in sentence', or 'import-review path'.",
   "version": "1.0.1",
   "skills": [
     "./skills/learning-esl-vocabulary"
