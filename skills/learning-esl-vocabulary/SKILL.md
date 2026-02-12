@@ -1,11 +1,18 @@
 ---
 name: learning-esl-vocabulary
+version: 1.0.1
 description: ESL vocabulary tutor with four modes - learn words with examples (learn 'word'), review with audio stories (review [date]), explain words in context (explain 'word' in "sentence"), and import from PDFs (import-review 'path').
 argument-hint: "'word'" or "'word' in \"sentence\"" or "'path/to/file.pdf'" or "'https://...'" or "YYYY-MM-DD"
 allowed-tools: [Read, Write, Glob, Bash]
 context: fork
 agent: general-purpose
 ---
+
+## Skill Directory
+
+**IMPORTANT**: All Python scripts in this skill are located in the `scripts/` subdirectory relative to this SKILL.md file. Before running any script, determine the absolute path of this skill's directory from the path of this SKILL.md file.
+
+Throughout these instructions, `{SKILL_DIR}` refers to the directory containing this SKILL.md file. Always use the resolved absolute path when executing scripts.
 
 # ESL Vocabulary Tutor
 
@@ -106,7 +113,7 @@ If neither installed, reviews generate without audio.
 **Reference files**: [import-review-template.md](references/import-review-template.md), [story-generation-guide.md](references/story-generation-guide.md)
 
 1. **Check dependency**: The script will auto-detect if pdfplumber is installed and provide installation instructions if missing
-2. **Extract words**: Run `python scripts/extract-bbdc-words.py "path_or_url"` to extract vocabulary
+2. **Extract words**: Run `python "{SKILL_DIR}/scripts/extract-bbdc-words.py" "path_or_url"` to extract vocabulary
    - The script automatically detects URLs (http:// or https://)
    - URLs are downloaded to `bbdc-review/downloads/YYYY-MM-DD/`
    - Check script output for `[SOURCE_FILE]` and `[PDF_BASENAME]` when using URLs

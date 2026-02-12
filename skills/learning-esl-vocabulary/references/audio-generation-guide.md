@@ -36,6 +36,8 @@ The skill automatically detects which engine is available:
 
 ## Usage
 
+**Note**: Throughout this guide, `{SKILL_DIR}` refers to the directory containing the SKILL.md file. Always resolve this to the absolute path before running scripts.
+
 ### For Daily Reviews
 
 When you run `review`, the skill generates:
@@ -44,14 +46,14 @@ When you run `review`, the skill generates:
 
 **OpenAI TTS command**:
 ```bash
-python scripts/openai-tts.py "TEXT" "{target-date}/daily-review-slow.mp3" slow
-python scripts/openai-tts.py "TEXT" "{target-date}/daily-review-normal.mp3" normal
+python "{SKILL_DIR}/scripts/openai-tts.py" "TEXT" "{target-date}/daily-review-slow.mp3" slow
+python "{SKILL_DIR}/scripts/openai-tts.py" "TEXT" "{target-date}/daily-review-normal.mp3" normal
 ```
 
 **edge-tts command**:
 ```bash
-python scripts/edge-tts-wrapper.py "TEXT" "{target-date}/daily-review-slow.mp3" slow
-python scripts/edge-tts-wrapper.py "TEXT" "{target-date}/daily-review-normal.mp3" normal
+python "{SKILL_DIR}/scripts/edge-tts-wrapper.py" "TEXT" "{target-date}/daily-review-slow.mp3" slow
+python "{SKILL_DIR}/scripts/edge-tts-wrapper.py" "TEXT" "{target-date}/daily-review-normal.mp3" normal
 ```
 
 ### For PDF Imports
@@ -68,14 +70,14 @@ When you run `import-review`, the skill generates:
 
 **OpenAI TTS command**:
 ```bash
-python scripts/openai-tts.py --file "bbdc-review/{date}/{pdf-basename}-audio-text.txt" "bbdc-review/{date}/{pdf-basename}-review-slow.mp3" slow
-python scripts/openai-tts.py --file "bbdc-review/{date}/{pdf-basename}-audio-text.txt" "bbdc-review/{date}/{pdf-basename}-review-normal.mp3" normal
+python "{SKILL_DIR}/scripts/openai-tts.py" --file "bbdc-review/{date}/{pdf-basename}-audio-text.txt" "bbdc-review/{date}/{pdf-basename}-review-slow.mp3" slow
+python "{SKILL_DIR}/scripts/openai-tts.py" --file "bbdc-review/{date}/{pdf-basename}-audio-text.txt" "bbdc-review/{date}/{pdf-basename}-review-normal.mp3" normal
 ```
 
 **edge-tts command**:
 ```bash
-python scripts/edge-tts-wrapper.py --file "bbdc-review/{date}/{pdf-basename}-audio-text.txt" "bbdc-review/{date}/{pdf-basename}-review-slow.mp3" slow
-python scripts/edge-tts-wrapper.py --file "bbdc-review/{date}/{pdf-basename}-audio-text.txt" "bbdc-review/{date}/{pdf-basename}-review-normal.mp3" normal
+python "{SKILL_DIR}/scripts/edge-tts-wrapper.py" --file "bbdc-review/{date}/{pdf-basename}-audio-text.txt" "bbdc-review/{date}/{pdf-basename}-review-slow.mp3" slow
+python "{SKILL_DIR}/scripts/edge-tts-wrapper.py" --file "bbdc-review/{date}/{pdf-basename}-audio-text.txt" "bbdc-review/{date}/{pdf-basename}-review-normal.mp3" normal
 ```
 
 ## Troubleshooting
