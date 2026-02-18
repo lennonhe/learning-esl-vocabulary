@@ -2,6 +2,8 @@
 
 Extended template for words with multiple meanings. Use this when a word has 2 or more distinct meanings.
 
+> **REQUIRED**: The most common meaning (based on real-world usage frequency) MUST be listed first as Meaning 1 and marked with `★ Most common`. Do not omit this marker.
+
 ## Table of Contents
 
 - [Template](#template)
@@ -93,7 +95,7 @@ Extended template for words with multiple meanings. Use this when a word has 2 o
 
 ## Tips for Multi-Meaning Entries
 
-1. **Order by frequency**: Put the most common meaning first, marked with "★ Most common"
+1. **Order by real-world frequency**: Put the most common meaning in everyday English first as Meaning 1, marked with "★ Most common". Base this on how frequently native speakers use each meaning in daily life, not on specialized or academic contexts.
 2. **Different parts of speech**: The same word may be a noun in one meaning and a verb in another
 3. **Context clues**: In "Typical usage", explain what context signals each meaning
 4. **Memory tips**: Focus on how meanings relate or differ from each other

@@ -123,3 +123,34 @@ ESL learners often make mistakes with these:
 - If you can say "one ___, two ___s" → it's countable [C]
 - If you say "some ___" but NOT "a ___" → it's uncountable [U]
 - Some words change meaning: "a glass" [C] (drinking container) vs. "glass" [U] (material)
+
+---
+
+## Most Common Meaning Indicator
+
+When a word has 2 or more distinct meanings, one meaning must be marked as the most common.
+
+### Format
+
+Add `★ Most common` directly after the meaning number in the header:
+
+```markdown
+### Meaning 1 ★ Most common
+```
+
+### Rules
+
+- **REQUIRED**: Every multi-meaning word entry must have exactly one meaning marked with `★ Most common`
+- **Order**: Place the most common meaning first (as Meaning 1)
+- **Do not omit**: This marker is mandatory — never leave it out for multi-meaning words
+- **Single-meaning words**: Do not add the marker (it is only for 2+ meaning words)
+
+### Frequency Basis
+
+Base the "most common" designation on **real-world usage frequency**:
+
+- How often native speakers use each meaning in everyday conversation
+- Which meaning learners are most likely to encounter first
+- General usage in daily life, not specialized or academic contexts
+
+**Example**: For "run", the physical action meaning (to move quickly on foot) is most common, not "run a business" or "a run in stockings".

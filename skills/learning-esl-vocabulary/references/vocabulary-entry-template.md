@@ -55,6 +55,8 @@ Use this format for all vocabulary entries (both single and multiple meanings):
 3. {Memory tip 3 (optional)}
 ```
 
+> **Multi-meaning words**: If the word has 2+ meanings, add `★ Most common` to the most common meaning's header (e.g., `### Meaning 1 ★ Most common`). See [multi-meaning-template.md](multi-meaning-template.md) for the full multi-meaning format.
+
 ## Guidelines for Common Patterns
 
 The "Common patterns to remember" section should:
@@ -100,7 +102,7 @@ The "Common patterns to remember" section should:
 - Use lowercase for the title (word/phrase) - do not capitalize
 - Always include pronunciation with both British and American IPA
 - Use the same format for single-meaning and multiple-meaning words
-- For multiple meanings, mark the most common meaning with "★ Most common"
+- For multiple meanings, you MUST mark the most common meaning (based on real-world usage frequency) with "★ Most common" on the meaning header. Order meanings from most to least common. See [multi-meaning-template.md](multi-meaning-template.md)
 - Include the part of speech for each meaning (it may differ between meanings)
 - Provide 2-4 example sentences per meaning
 - Add "Typical usage" to help learners know when to use each meaning

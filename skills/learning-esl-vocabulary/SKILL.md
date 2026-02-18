@@ -1,6 +1,6 @@
 ---
 name: learning-esl-vocabulary
-version: 1.0.1
+version: 1.0.2
 description: Tutors ESL learners in English vocabulary for daily practice and PDF-based learning with four modes - learn words with examples (learn 'word'), review with audio stories (review [date]), explain words in context (explain 'word' in "sentence"), and import from PDFs (import-review 'path').
 argument-hint: "'word'" or "'word' in \"sentence\"" or "'path/to/file.pdf'" or "'https://...'" or "YYYY-MM-DD"
 allowed-tools: [Read, Write, Glob, Bash]
@@ -55,18 +55,21 @@ If neither installed, reviews generate without audio.
 
 **Reference files**: [vocabulary-entry-template.md](references/vocabulary-entry-template.md), [writing-guidelines.md](references/writing-guidelines.md), [memory-tips-guide.md](references/memory-tips-guide.md)
 
-1. **Explain the meaning** using ESL-friendly language
+1. **Determine the word's meanings**: Identify whether the word has one meaning or multiple distinct meanings
+   - If the word has **2+ meanings**: load [multi-meaning-template.md](references/multi-meaning-template.md) and follow it
+   - If the word has **2+ meanings**: mark the most common meaning (based on real-world usage frequency) with `★ Most common` on the meaning header — this is required, do not omit it
+
+2. **Explain each meaning** using ESL-friendly language
    - Use simple vocabulary (see writing-guidelines.md)
    - For nouns, include countability: `[C]`, `[U]`, or `[C/U]`
    - Write 25-50 words per meaning with "In simpler words" paraphrase
    - Use consistent format: "### Meaning 1", part of speech, examples, patterns
-   - Mark most common meaning with "★ Most common"
 
-2. **Provide pronunciation** (IPA with 🇬🇧 BrE and 🇺🇸 AmE)
+3. **Provide pronunciation** (IPA with 🇬🇧 BrE and 🇺🇸 AmE)
 
-3. **Give 1-3 memory tips** (see memory-tips-guide.md)
+4. **Give 1-3 memory tips** (see memory-tips-guide.md)
 
-4. **Save to file**: `YYYY-MM-DD/{word}.md` (see vocabulary-entry-template.md)
+5. **Save to file**: `YYYY-MM-DD/{word}.md` (see vocabulary-entry-template.md)
 
 ### 2. Daily Review (`review [YYYY-MM-DD]`)
 
@@ -186,3 +189,4 @@ Load these files when you need detailed guidance:
 - Create date folder if it doesn't exist
 - Handle words, phrases, and idioms equally
 - If no words learned today, inform user kindly (don't create empty review)
+- **Strict compliance**: Follow all templates, formatting rules, and indicators exactly as specified — every required element (such as "★ Most common" for multi-meaning words) must be present in the output
